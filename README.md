@@ -9,6 +9,7 @@ Game được lấy cảm hứng từ chú chó [Balltze](https://youtu.be/XAArK
 Flappy Doge được viết bằng thư viện [SDL2](https://www.libsdl.org/download-2.0.php) và ngôn ngữ C++.
 
 <img width="540" height="520" alt="balltze" src="https://pbs.twimg.com/media/EqI3fUnVoAA58J6.jpg">
+<img width="540" height="440" alt="balltze" src="https://cdn.techinasia.com/wp-content/uploads/2020/10/k67gphvc-1392300534.jpg">
 
 
 # Tính năng <a name="feature"></a>

@@ -5,4 +5,7 @@
 
 # Giới thiệu <a name="introduction"></a>
 
-Game được lấy cảm hứng từ chú chó Balltze - một trong những trào lưu meme của năm 2020 và Flappy Bird - tựa game Việt nổi tiếng do Nguyễn Hà Đông phát triển.
+Game được lấy cảm hứng từ chú chó [Balltze](https://youtu.be/XAArKffqa8Q) - một trong những trào lưu meme hot nhất năm 2020 và Flappy Bird - tựa game Việt nổi tiếng do Nguyễn Hà Đông phát triển vào năm 2013.
+
+# Tính năng <a name="feature"></a>
+

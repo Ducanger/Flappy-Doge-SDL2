@@ -8,6 +8,9 @@
 Game được lấy cảm hứng từ chú chó [Balltze](https://youtu.be/XAArKffqa8Q) - một trong những trào lưu meme hot nhất năm 2020 và [Flappy Bird](https://vi.wikipedia.org/wiki/Flappy_Bird) - tựa game Việt nổi tiếng do Nguyễn Hà Đông phát triển vào năm 2013.
 Flappy Doge được viết bằng thư viện [SDL2](https://www.libsdl.org/download-2.0.php) và ngôn ngữ C++.
 
+<img alt="balltze" src="https://pbs.twimg.com/media/EqI3fUnVoAA58J6.jpg">
+
+
 # Tính năng <a name="feature"></a>
 
 # Cài đặt <a name="setting"></a>

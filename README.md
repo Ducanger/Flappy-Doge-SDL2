@@ -10,10 +10,10 @@ Flappy Doge được viết bằng thư viện [SDL2](https://www.libsdl.org/dow
 
 <div class="row">
   <div class="column">
-    <img style="width:50%" alt="balltze" src="https://pbs.twimg.com/media/EqI3fUnVoAA58J6.jpg">
+    <img style="width:20%" alt="balltze" src="https://pbs.twimg.com/media/EqI3fUnVoAA58J6.jpg">
   </div>
   <div class="column">
-    <img style="width:50%" alt="balltze" src="https://cdn.techinasia.com/wp-content/uploads/2020/10/k67gphvc-1392300534.jpg">
+    <img style="width:20%" alt="balltze" src="https://cdn.techinasia.com/wp-content/uploads/2020/10/k67gphvc-1392300534.jpg">
   </div>
 </div>
 <img width="540" height="520" alt="balltze" src="https://pbs.twimg.com/media/EqI3fUnVoAA58J6.jpg">

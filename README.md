@@ -37,9 +37,7 @@
 * Click chuột/ phím SPACE/ phím UP để chơi.
 * Nhấn phím ESC để tạm dừng.
 
-<p align="center">
-<img src="https://drive.google.com/uc?export=view&id=<1IBZjA-UXCPXfQlSz-sms_7YxVcc8HIzT>">
-</p>
+<a href="https://drive.google.com/uc?export=view&id=1IBZjA-UXCPXfQlSz-sms_7YxVcc8HIzT"><img src="https://drive.google.com/uc?export=view&id=1IBZjA-UXCPXfQlSz-sms_7YxVcc8HIzT"/></a>
 
 # Cài đặt <a name="installation"></a>
 

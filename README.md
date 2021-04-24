@@ -18,6 +18,7 @@
 **1. Gameplay**
 * Xử lí va chạm giữa nhân vật và ống, mặt đất, viền trên cửa sổ.
 * Xử lí các thao tác phím/chuột của người chơi.
+* Hiện thị điểm, biểu tượng trạng thái của game (chơi/tạm dừng).
 * Mặt đất, nhân vật chuyển động giúp game chân thực hơn.
 * Giới hạn FPS để có tương thích với mọi thiết bị (nếu không giới hạn thì khi chạy game trên máy cấu hình cao, hình ảnh sẽ bị render quá nhanh, gây ra hiện ứng "tua nhanh")
 

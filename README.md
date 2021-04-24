@@ -9,9 +9,7 @@
 * Game được lấy cảm hứng từ chú chó [Kabosu](https://vi.wikipedia.org/wiki/Doge_(meme)) - một trong những meme hot nhất từ năm 2013 cho đến tận bây giờ và [Flappy Bird](https://vi.wikipedia.org/wiki/Flappy_Bird) - tựa game Việt nổi tiếng do Nguyễn Hà Đông phát triển vào năm 2013.
 * Flappy Doge được viết bằng thư viện [SDL2](https://www.libsdl.org/download-2.0.php) và ngôn ngữ C++.
 
-<p align="center">
-<img width="640" height="480" alt="balltze" src="https://i.pinimg.com/originals/02/98/fa/0298fa4e7f8b0495169b2e964f06d7f2.jpg">
-</p>
+<iframe src="https://drive.google.com/file/d/1IBZjA-UXCPXfQlSz-sms_7YxVcc8HIzT/preview" width="640" height="480"></iframe>
 
 # Tính năng <a name="feature"></a>
 

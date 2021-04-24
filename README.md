@@ -36,6 +36,7 @@
 # Hướng dẫn chơi <a name="play"></a>
 * Click chuột/ phím SPACE/ phím UP để chơi.
 * Nhấn phím ESC để tạm dừng.
+* Video demo tại [Youtube]().
 
 <a href="https://drive.google.com/uc?export=view&id=1IBZjA-UXCPXfQlSz-sms_7YxVcc8HIzT"><img src="https://drive.google.com/uc?export=view&id=1IBZjA-UXCPXfQlSz-sms_7YxVcc8HIzT"/></a>
 

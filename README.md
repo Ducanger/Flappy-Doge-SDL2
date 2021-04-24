@@ -34,7 +34,7 @@
 * Biểu tượng chơi tiếp.
 
 # Hướng dẫn chơi <a name="play"></a>
-* Click chuột/ phím SPACE/ phím UP để chơi.
+* Click chuột/phím SPACE/phím UP để chơi.
 * Nhấn phím ESC để tạm dừng.
 * Video demo tại [Youtube](https://youtu.be/LihM4SI81ug).
 

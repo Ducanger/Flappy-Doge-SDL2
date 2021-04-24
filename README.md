@@ -38,7 +38,7 @@
 * Nhấn phím ESC để tạm dừng.
 * Video demo tại [Youtube](https://youtu.be/LihM4SI81ug).
 
-<a href="https://drive.google.com/uc?export=view&id=1IBZjA-UXCPXfQlSz-sms_7YxVcc8HIzT"><img src="https://drive.google.com/uc?export=view&id=1IBZjA-UXCPXfQlSz-sms_7YxVcc8HIzT"/></a>
+<a href="https://drive.google.com/uc?export=view&id=1Mvo_GCJj5B0oI6qCvrP-139riv1swe4a"><img src="https://drive.google.com/uc?export=view&id=1Mvo_GCJj5B0oI6qCvrP-139riv1swe4a"/></a>
 
 # Cài đặt <a name="installation"></a>
 

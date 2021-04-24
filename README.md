@@ -19,11 +19,13 @@
 * Xử lí va chạm giữa nhân vật và ống, mặt đất, viền trên cửa sổ.
 * Mặt đất, nhân vật chuyển động giúp game chân thực hơn.
 * Giới hạn FPS để có tương thích với mọi thiết bị (nếu không giới hạn thì khi chạy game trên máy cấu hình cao, hình ảnh sẽ bị render quá nhanh, gây ra hiện ứng "tua nhanh")
+
 **2. TabPause**
 * Bật/Tắt tiếng game.
 * Giao diện Sáng/Tối (thay đổi ngay sau khi chọn).
 * Xem điểm hiện tại, điểm cao nhất.
 * Biểu tượng chơi tiếp.
+
 **3. TabGameOver**
 * Hiển thị huân chương tương ứng với số điểm (Gold > 50, Silver > 20, Honor <= 20).
 * Xem điểm hiện tại, điểm cao nhất.

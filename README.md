@@ -15,7 +15,7 @@
 
 # Tính năng <a name="feature"></a>
 
-**1. Gameplay**
+**1. GameWindow**
 * Xử lí va chạm giữa nhân vật và ống, mặt đất, viền trên cửa sổ.
 * Xử lí các thao tác phím/chuột của người chơi.
 * Hiện thị điểm, biểu tượng trạng thái của game (chơi/tạm dừng).

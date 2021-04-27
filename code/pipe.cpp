@@ -8,9 +8,9 @@ bool pipe::init()
     posPipe.clear();
     for (signed char i = 0; i < TOTAL_PIPE; i++)
     {
-        position k;
-        k.getPos(SCREEN_WIDTH + i * PIPE_DISTANCE + 350, (rand() % (randMax - randMin + 1)) + randMin);
-        posPipe.push_back(k);
+        position temp;
+        temp.getPos(SCREEN_WIDTH + i * PIPE_DISTANCE + 350, (rand() % (randMax - randMin + 1)) + randMin);
+        posPipe.push_back(temp);
     }
     if (isNULL())
     {
@@ -41,7 +41,7 @@ void pipe::render()
 
 void pipe::update()
 {
-    if (!lost)
+    if (!die)
     {
         for (signed char i = 0; i < TOTAL_PIPE; i++)
         {

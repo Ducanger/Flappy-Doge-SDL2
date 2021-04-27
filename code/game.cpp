@@ -1,23 +1,24 @@
 #include "game.h"
-#include <iostream>
 #include "lib.h"
+#include <iostream>
 
 void game::takeInput()
 {
-    while(SDL_PollEvent(&e) != 0)
+    while(SDL_PollEvent(&event) != 0)
     {
-        if (e.type == SDL_QUIT)
+        if (event.type == SDL_QUIT)
         {
-            UserInput.Type = input::QUIT;
+            userInput.Type = input::QUIT;
             quit = true;
         }
-        else if ( e.type == SDL_MOUSEBUTTONDOWN || (e.type == SDL_KEYDOWN && (e.key.keysym.sym == SDLK_SPACE || e.key.keysym.sym == SDLK_UP) && e.key.repeat == 0) )
+        else if (event.type == SDL_MOUSEBUTTONDOWN || (event.type == SDL_KEYDOWN && 
+		(event.key.keysym.sym == SDLK_SPACE || event.key.keysym.sym == SDLK_UP) && event.key.repeat == 0) )
         {
-            UserInput.Type = input::PLAY;
+            userInput.Type = input::PLAY;
         }
-		else if (e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_ESCAPE && e.key.repeat == 0)
+		else if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_ESCAPE && event.key.repeat == 0)
 		{
-			UserInput.Type = input::PAUSE;
+			userInput.Type = input::PAUSE;
 		}
     }
 }
@@ -32,17 +33,11 @@ game::game()
 
 game::~game()
 {
-
     shiba.Free();
-
     pipe.Free();
-
     land.Free();
-
     sound.Free();
-
     free();
-
     releaseGraphic();
 }
 
@@ -52,7 +47,6 @@ void game::releaseGraphic()
     gWindow = NULL;
     SDL_DestroyRenderer( gRenderer );
     gRenderer = NULL;
-
     IMG_Quit();
     TTF_Quit();
     SDL_Quit();
@@ -60,10 +54,8 @@ void game::releaseGraphic()
 
 bool game::initGraphic()
 {
-    //Initialization flag
 	bool success = true;
 
-	//Initialize SDL
 	if( SDL_Init( SDL_INIT_VIDEO ) < 0 )
 	{
 		printf( "SDL could not initialize! SDL Error: %s\n", SDL_GetError() );
@@ -71,13 +63,10 @@ bool game::initGraphic()
 	}
 	else
 	{
-		//Set texture filtering to linear
 		if( !SDL_SetHint( SDL_HINT_RENDER_SCALE_QUALITY, "1" ) )
 		{
 			printf( "Warning: Linear texture filtering not enabled!" );
 		}
-
-		//Create window
 
 		gWindow = SDL_CreateWindow( "Flappy Doge", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
 
@@ -88,7 +77,6 @@ bool game::initGraphic()
 		}
 		else
 		{
-			//Create vsynced renderer for window
 			gRenderer = SDL_CreateRenderer( gWindow, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC );
 			if( gRenderer == NULL )
 			{
@@ -97,10 +85,8 @@ bool game::initGraphic()
 			}
 			else
 			{
-				//Initialize renderer color
 				SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );
 
-				//Initialize PNG loading
 				int imgFlags = IMG_INIT_PNG;
 				if( !( IMG_Init( imgFlags ) & imgFlags ) )
 				{
@@ -108,7 +94,6 @@ bool game::initGraphic()
 					success = false;
 				}
 
-                //Initialize SDL_ttf
 				if( TTF_Init() == -1 )
 				{
 					printf( "SDL_ttf could not initialize! SDL_ttf Error: %s\n", TTF_GetError() );
@@ -444,7 +429,7 @@ bool game::checkReplay()
 
 void game::Restart()
 {
-    lost = false;
+    die = false;
     score = 0;
     shiba.resetTime();
 }

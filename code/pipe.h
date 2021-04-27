@@ -1,8 +1,8 @@
 #pragma once
 
-#include <vector>
 #include "lib.h"
 #include <iostream>
+#include <vector>
 
 using namespace std;
 

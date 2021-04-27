@@ -8,7 +8,7 @@ bool doge::init(bool isDark)
     if (isDark) shiba_path = "res/image/shiba-dark.png";
     if (saved_path == shiba_path)
     {
-        pos.getPos(75, SCREEN_HEIGHT / 2 - 10);
+        posDoge.getPos(75, SCREEN_HEIGHT / 2 - 10);
         ahead = 0;
         angle = 0;
     }
@@ -17,8 +17,6 @@ bool doge::init(bool isDark)
         saved_path = shiba_path;
         if ( Load(shiba_path.c_str() , 1) )
         {
-            //angle = 0;
-            //time = -1;
             return true;
         }
         else
@@ -37,16 +35,16 @@ void doge::Free()
 
 void doge::render()
 {
-    Render(pos.x, pos.y, angle);
+    Render(posDoge.x, posDoge.y, angle);
 }
 
 void doge::fall() 
 {
-    if (lost && pos.y < SCREEN_HEIGHT - LAND_HEIGHT - SHIBA_HEIGHT - 5)
+    if (die && posDoge.y < SCREEN_HEIGHT - LAND_HEIGHT - SHIBA_HEIGHT - 5)
     {
         if (time == 0)
         {
-            x0 = pos.y;
+            x0 = posDoge.y;
             angle = -25;
         }
         else if (angle < 70 && time > 30)
@@ -56,7 +54,7 @@ void doge::fall()
 
         if (time >= 0)
         {
-            pos.y = x0 + time * time * 0.18 - 7.3 * time;
+            posDoge.y = x0 + time * time * 0.18 - 7.3 * time;
             time++;
         }
     }
@@ -65,11 +63,11 @@ void doge::fall()
 
 void doge::update(short int pipeWidth, short int pipeHeight)
 {
-    if (!lost)
+    if (!die)
     {
         if (time == 0)
         {
-            x0 = pos.y;
+            x0 = posDoge.y;
             angle = -25;
         }
         else if (angle < 70 && time > 30)
@@ -79,24 +77,24 @@ void doge::update(short int pipeWidth, short int pipeHeight)
 
         if (time >= 0)
         {
-            pos.y = x0 + time * time * 0.18 - 7.3 * time;
+            posDoge.y = x0 + time * time * 0.18 - 7.3 * time;
             time++;
         }
 
-        if ( (pos.x + getWidth() > posPipe[ahead].x + 5) && (pos.x + 5 < posPipe[ahead].x + pipeWidth) &&
-             (pos.y + 5 < posPipe[ahead].y + pipeHeight || pos.y  + getHeight() > posPipe[ahead].y + pipeHeight + PIPE_SPACE + 5) )
+        if ( (posDoge.x + getWidth() > posPipe[ahead].x + 5) && (posDoge.x + 5 < posPipe[ahead].x + pipeWidth) &&
+             (posDoge.y + 5 < posPipe[ahead].y + pipeHeight || posDoge.y  + getHeight() > posPipe[ahead].y + pipeHeight + PIPE_SPACE + 5) )
         {
-            lost = true;
+            die = true;
         }
-        else if (pos.x > posPipe[ahead].x + pipeWidth )
+        else if (posDoge.x > posPipe[ahead].x + pipeWidth )
         {
             ahead = ( ahead + 1 ) % TOTAL_PIPE;
             score++;
         }
 
-        if ( pos.y > SCREEN_HEIGHT - LAND_HEIGHT -  SHIBA_HEIGHT - 5 || pos.y < - 10 )
+        if (posDoge.y > SCREEN_HEIGHT - LAND_HEIGHT -  SHIBA_HEIGHT - 5 || posDoge.y < - 10 )
         {
-            lost = true;
+            die = true;
         }
     }
 }

@@ -18,7 +18,7 @@ public:
         enum type { QUIT, PLAY, NONE, PAUSE};
         type Type;
     };
-    input UserInput;
+    input userInput;
     doge shiba;
     pipe pipe;
     sound sound;
@@ -35,9 +35,9 @@ public:
         return quit; 
     }
 
-    bool isLost()
+    bool isDie()
     {
-        return lost;
+        return die;
     }
 
     int getPipeWidth()
@@ -98,5 +98,3 @@ private:
     const double scaleNumberS = 0.75;
     short int bestScore;
 };
-
-

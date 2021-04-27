@@ -25,15 +25,13 @@ public:
 
     bool isNULL();
 
-    void free();
-
     bool Load(string path, double scale = 1);
-
-    void Render(short int x, short int y, short int angle = 0, SDL_Rect* clip = NULL, SDL_RendererFlip flip = SDL_FLIP_NONE);
 
     short int getWidth();
     short int getHeight();
 
+    void free();
+    void Render(short int x, short int y, short int angle = 0, SDL_Rect* clip = NULL, SDL_RendererFlip flip = SDL_FLIP_NONE);
 public:
     SDL_Texture* Texture;
 
@@ -43,14 +41,13 @@ public:
 public:
     static SDL_Window* gWindow;
     static SDL_Renderer* gRenderer;
-    static SDL_Event e;
+    static SDL_Event event;
     static bool quit;
-    static bool lost;
+    static bool die;
     static short int score;
 
     static const short int SCREEN_WIDTH = 350;
     static const short int SCREEN_HEIGHT = 625;
-
     static const short int PIPE_SPACE = 160;
     static const short int TOTAL_PIPE = 4;
     static const short int PIPE_DISTANCE = 220;
@@ -58,6 +55,3 @@ public:
     static const short int SHIBA_WIDTH = 50;
     static const short int SHIBA_HEIGHT = 35;
 };
-
-
-

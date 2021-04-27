@@ -13,8 +13,6 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-
-
     Uint32 frameStart;
     short int frameTime;
     game g;
@@ -28,23 +26,23 @@ int main(int argc, char** argv)
     {
         frameStart = SDL_GetTicks();
         
-        if (g.isLost())
+        if (g.isDie())
         {
             if (isMenu) {
                 g.sound.playHit();
                 g.shiba.render();
             }
-            g.UserInput.Type = game::input::NONE;
-            while(g.isLost() && !g.isQuit())
+            g.userInput.Type = game::input::NONE;
+            while(g.isDie() && !g.isQuit())
             {
                 g.takeInput();
-                if (isMenu == 1 && g.UserInput.Type == game::input::PLAY)
+                if (isMenu == 1 && g.userInput.Type == game::input::PLAY)
                 {
                     if (g.checkReplay())
                     {
                         isMenu = 0;
                     }
-                    g.UserInput.Type = game::input::NONE;
+                    g.userInput.Type = game::input::NONE;
                 }
                 if (!isDark) g.renderBackground();
                 else g.renderBackgroundNight();
@@ -66,11 +64,11 @@ int main(int argc, char** argv)
                     g.shiba.init(isDark); 
                     g.shiba.render();
                     g.renderMessage();
-                    if (g.UserInput.Type == game::input::PLAY)
+                    if (g.userInput.Type == game::input::PLAY)
                     {
                         g.Restart();
                         isMenu = 1;
-                        g.UserInput.Type = game::input::NONE;
+                        g.userInput.Type = game::input::NONE;
                     }
                     g.land.update();
                 }
@@ -82,17 +80,17 @@ int main(int argc, char** argv)
         {
             g.takeInput();
 
-            if (g.UserInput.Type == game::input::PAUSE)
+            if (g.userInput.Type == game::input::PAUSE)
             {
                 isPause = abs(1 - isPause);
-                g.UserInput.Type = game::input::NONE;
+                g.userInput.Type = game::input::NONE;
             }
 
-            if (isPause == 0 && g.UserInput.Type == game::input::PLAY)
+            if (isPause == 0 && g.userInput.Type == game::input::PLAY)
             {
                 if (isSound) g.sound.playBreath();
                 g.shiba.resetTime(); 
-                g.UserInput.Type = game::input::NONE;
+                g.userInput.Type = game::input::NONE;
             }
 
             if (!isDark) g.renderBackground();
@@ -119,13 +117,13 @@ int main(int argc, char** argv)
                 g.sound.renderSound();
                 if (!isDark) g.lightTheme(); else g.darkTheme();
                 g.nextButton();
-                if (g.UserInput.Type == game::input::PLAY)
+                if (g.userInput.Type == game::input::PLAY)
                 {
                     if (g.checkReplay())
                     {
                         isPause = 0;
                     }
-                    else if (g.sound.soundIcon())
+                    else if (g.sound.checkSound())
                     {
                         isSound = abs(1 - isSound);
                     }
@@ -134,7 +132,7 @@ int main(int argc, char** argv)
                         isDark = abs(1 - isDark);
                         g.shiba.init(isDark);
                     }
-                    g.UserInput.Type = game::input::NONE;
+                    g.userInput.Type = game::input::NONE;
                 }
             }
             g.display();

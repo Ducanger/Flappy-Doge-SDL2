@@ -9,8 +9,6 @@ using namespace std;
 class sound:LTexture
 {
 public:
-    bool playing;
-
     bool init();
 
     void Free();
@@ -21,16 +19,15 @@ public:
 
     void renderSound();
 
-    bool soundIcon();
+    bool checkSound();
 
 private:
     const short int POS_X = 107;
     const short int POS_Y = 267;
+    bool isPlay = 0;
     Mix_Chunk* breath = NULL;
     Mix_Chunk* hit = NULL;
     Mix_Chunk* drop = NULL;
     SDL_Rect Mute ;
     SDL_Rect Active ;
 };
-
-

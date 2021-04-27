@@ -5,7 +5,7 @@
 
 bool land::init()
 {
-    pos.getPos(0, SCREEN_HEIGHT - LAND_HEIGHT);
+    posLand.getPos(0, SCREEN_HEIGHT - LAND_HEIGHT);
     string back_path = "res/image/land.png";
     if (isNULL())
     {
@@ -28,32 +28,32 @@ void land::Free()
 
 void land::render()
 {
-    if (pos.x > -getWidth() + SCREEN_WIDTH)
+    if (posLand.x > -getWidth() + SCREEN_WIDTH)
     {
-        Render(pos.x, pos.y);
+        Render(posLand.x, posLand.y);
     }
-    else if (pos.x >= -getWidth() && pos.x <= -getWidth() + SCREEN_WIDTH)
+    else if (posLand.x >= -getWidth() && posLand.x <= -getWidth() + SCREEN_WIDTH)
     {
-        Render(pos.x, pos.y);
-        Render(pos.x + getWidth(), pos.y, 0, NULL);
+        Render(posLand.x, posLand.y);
+        Render(posLand.x + getWidth(), posLand.y, 0, NULL);
     }
-    else if (pos.x > - 2 * getWidth() + SCREEN_HEIGHT)
+    else if (posLand.x > - 2 * getWidth() + SCREEN_HEIGHT)
     {
-        Render(pos.x + getWidth(), pos.y, 0, NULL);
+        Render(posLand.x + getWidth(), posLand.y, 0, NULL);
     }
-    else if (pos.x > - 2 * getWidth() && pos.x <= - 2 * getWidth() + SCREEN_HEIGHT)
+    else if (posLand.x > - 2 * getWidth() && posLand.x <= - 2 * getWidth() + SCREEN_HEIGHT)
     {
-        Render(pos.x + getWidth(), pos.y, 0, NULL);
-        Render(pos.x + 2 * getWidth(), pos.y);
+        Render(posLand.x + getWidth(), posLand.y, 0, NULL);
+        Render(posLand.x + 2 * getWidth(), posLand.y);
     }
     else
     {
-        pos.getPos(0, SCREEN_HEIGHT - LAND_HEIGHT);
-        Render(pos.x, pos.y);
+        posLand.getPos(0, SCREEN_HEIGHT - LAND_HEIGHT);
+        Render(posLand.x, posLand.y);
     }
 }
 
 void land::update()
 {
-    pos.x -= 3;
+    posLand.x -= 3;
 }

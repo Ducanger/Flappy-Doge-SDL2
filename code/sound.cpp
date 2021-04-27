@@ -7,7 +7,7 @@ bool sound::init()
 {
     string breath_path = "res/sound/sfx_breath.wav";
     string hit_path = "res/sound/sfx_bonk.wav";
-    string soundIcon_path = "res/image/sound.png";
+    string sound_path = "res/image/sound.png";
 
     bool success = true;
 
@@ -18,7 +18,7 @@ bool sound::init()
     }
     else
     {
-        if( Mix_OpenAudio( 22050, MIX_DEFAULT_FORMAT, 2, 2048 ) < 0 )
+        if( Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 2048) < 0 )
         {
             printf( "SDL_mixer could not initialize! SDL_mixer Error: %s\n", Mix_GetError() );
             success = false;
@@ -38,14 +38,14 @@ bool sound::init()
             success = false;
         }
 
-        if (!Load(soundIcon_path))
+        if (!Load(sound_path))
         {
             return false;
         }
 
         Active.x = 0; Active.y = 0; Active.w = getWidth(); Active.h = getHeight() / 2;
         Mute.x = 0; Mute.y = getHeight() / 2; Mute.w = getWidth(); Mute.h = getHeight() / 2;
-        playing = true;
+        isPlay = true;
     }
     return success;
 }
@@ -64,7 +64,7 @@ void sound::Free()
 
 void sound::playBreath()
 {
-    if (playing)
+    if (isPlay)
     {
         Mix_PlayChannel( -1, breath, 0 );
     }
@@ -72,7 +72,7 @@ void sound::playBreath()
 
 void sound::playHit()
 {
-    if (playing)
+    if (isPlay)
     {
         Mix_PlayChannel(-1, hit, 0);
     }
@@ -80,7 +80,7 @@ void sound::playHit()
 
 void sound::renderSound()
 {
-    if (playing)
+    if (isPlay)
     {
         Render(POS_X, POS_Y, 0, &Active);
     }
@@ -90,14 +90,14 @@ void sound::renderSound()
     }
 }
 
-bool sound::soundIcon()
+bool sound::checkSound()
 {
     int x, y;
     SDL_GetMouseState(&x, &y);
     if (x > POS_X && x < POS_X + getWidth() &&
         y > POS_Y && y < POS_Y + getHeight())
     {
-        playing = !playing;
+        isPlay = !isPlay;
         return true;
     }
     return false;

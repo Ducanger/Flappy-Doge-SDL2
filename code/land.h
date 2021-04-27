@@ -17,5 +17,5 @@ public:
     void update();
 
 private:
-    position pos;
+    position posLand;
 };

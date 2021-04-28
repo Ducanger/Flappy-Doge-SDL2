@@ -41,7 +41,7 @@ _*Các tài nguyên dùng trong game được sưu tầm từ Internet và hầu
 * Video demo tại [Youtube](https://youtu.be/LihM4SI81ug).
 
 <p align="center">
-<img src="https://imgur.com/dvni6mF">
+<img src="https://i.imgur.com/dvni6mF.png">
 </p>
 # Cài đặt <a name="installation"></a>
 

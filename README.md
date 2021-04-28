@@ -40,8 +40,9 @@ _*Các tài nguyên dùng trong game được sưu tầm từ Internet và hầu
 * Nhấn phím ESC để tạm dừng.
 * Video demo tại [Youtube](https://youtu.be/LihM4SI81ug).
 
-<a href="https://drive.google.com/uc?export=view&id=1-VLc4JJQAT5af783uYiI_5eb3X3PrUBp"><img src="https://drive.google.com/uc?export=view&id=1-VLc4JJQAT5af783uYiI_5eb3X3PrUBp"/></a>
-
+<p align="center">
+<img src="https://imgur.com/dvni6mF">
+</p>
 # Cài đặt <a name="installation"></a>
 
 Sau khi cài đặt [Mingw64](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-win32/seh/x86_64-8.1.0-release-win32-seh-rt_v6-rev0.7z/download), [SDL2](https://www.libsdl.org/download-2.0.php), [SDL_Image](https://www.libsdl.org/projects/SDL_image), [SDL_TTF](https://www.libsdl.org/projects/SDL_ttf), và [SDL_Mixer](https://www.libsdl.org/projects/SDL_mixer), chạy file **Flappy Doge.exe** để vào game.

@@ -28,23 +28,14 @@ void land::Free()
 
 void land::render()
 {
-    if (posLand.x > -getWidth() + SCREEN_WIDTH)
+    if (posLand.x > 0)
     {
         Render(posLand.x, posLand.y);
     }
-    else if (posLand.x >= -getWidth() && posLand.x <= -getWidth() + SCREEN_WIDTH)
+    else if (posLand.x > -SCREEN_WIDTH && posLand.x <= 0)
     {
         Render(posLand.x, posLand.y);
-        Render(posLand.x + getWidth(), posLand.y, 0, NULL);
-    }
-    else if (posLand.x > - 2 * getWidth() + SCREEN_HEIGHT)
-    {
-        Render(posLand.x + getWidth(), posLand.y, 0, NULL);
-    }
-    else if (posLand.x > - 2 * getWidth() && posLand.x <= - 2 * getWidth() + SCREEN_HEIGHT)
-    {
-        Render(posLand.x + getWidth(), posLand.y, 0, NULL);
-        Render(posLand.x + 2 * getWidth(), posLand.y);
+        Render(posLand.x + SCREEN_WIDTH, posLand.y, 0, NULL);
     }
     else
     {

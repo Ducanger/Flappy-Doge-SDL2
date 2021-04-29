@@ -16,7 +16,6 @@ int main(int argc, char** argv)
     Uint32 frameStart;
     short int frameTime;
     game g;
-    srand(time(0));
     bool isMenu = 0;
     bool isPause = 0;
     bool isSound = 1;

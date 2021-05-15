@@ -1,53 +1,49 @@
-#### Mục lục
-1. [Giới thiệu](#introduction)
-2. [Tính năng](#feature)
-3. [Hướng dẫn chơi](#play)
-4. [Cài đặt](#installation)
+#### Table of contents
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [How to play](#play)
+4. [Installation](#installation)
 
-# Giới thiệu <a name="introduction"></a>
+# Introduction <a name="introduction"></a>
 
-* Game được lấy cảm hứng từ chú chó [Kabosu](https://vi.wikipedia.org/wiki/Doge_(meme)) - một trong những meme hot nhất từ năm 2013 cho đến tận bây giờ và [Flappy Bird](https://vi.wikipedia.org/wiki/Flappy_Bird) - tựa game Việt nổi tiếng do Nguyễn Hà Đông phát triển vào năm 2013.
-* Flappy Doge được viết bằng thư viện [SDL2](https://www.libsdl.org/download-2.0.php) và ngôn ngữ C++.
+* The game is inspired by the dog [Kabosu](https://wikipedia.org/wiki/Doge_(meme)) - one of the hottest memes from 2013 until now and [Flappy Bird](https://wikipedia.org/wiki/Flappy_Bird) - the famous Vietnamese game developed by Nguyen Ha Dong in 2013.
+* Flappy Doge was created using [SDL2](https://www.libsdl.org/download-2.0.php) and C++.
 
-_*Các tài nguyên dùng trong game được sưu tầm từ Internet và hầu hết đã được chỉnh sửa lại để phù hợp với tính chất của game, các file chỉnh sửa được lưu lại tại đường dẫn 
-./code/res/psd._
+_*The resources used in the game are collected from the Internet and most of them have been edited to suit the property of the game, the edit files are saved at the path ./code/res/psd._
+
 <p align="center">
 <img width="640" height="480" src="https://i.pinimg.com/originals/02/98/fa/0298fa4e7f8b0495169b2e964f06d7f2.jpg">
 </p>
 
-# Tính năng <a name="feature"></a>
+# Features <a name="features"></a>
 
 **1. GameWindow**
-* Xử lí va chạm giữa nhân vật và ống, mặt đất, viền trên cửa sổ.
-* Xử lí các thao tác phím/chuột của người chơi.
-* Hiện thị điểm, biểu tượng trạng thái của game (chơi/tạm dừng).
-* Mặt đất, nhân vật chuyển động giúp game chân thực hơn.
-* Giới hạn FPS để có tương thích với mọi thiết bị (nếu không giới hạn thì khi chạy game trên máy cấu hình cao, hình ảnh sẽ bị render quá nhanh, gây ra hiện ứng "tua nhanh")
+* Handles collisions between characters and pipes, the ground, and borders on windows.
+* Handles the player's key/mouse actions.
+* Display score, game status icon (play/pause).
+* The ground, moving characters make the game more realistic.
+* Limit FPS to be compatible with all devices (if not, when running the game on a high-configuration machine, the image will be rendered too fast, causing the "fast forward" effect).
 
 **2. TabPause**
-* Bật/Tắt tiếng game.
-* Giao diện Sáng/Tối (thay đổi ngay sau khi chọn).
-* Xem điểm hiện tại, điểm cao nhất.
-* Biểu tượng chơi tiếp.
+* Enable/Mute the game.
+* Light/Dark interface (changes immediately after selection).
+* View current score, highest score.
+* Play next icon.
 
 **3. TabGameOver**
-* Hiển thị huân chương tương ứng với số điểm (Gold > 50, Silver > 20, Honor <= 20).
-* Xem điểm hiện tại, điểm cao nhất.
-* Biểu tượng chơi tiếp.
+* Display medals corresponding to the number of points (Gold > 50, Silver > 20, Honor <= 20).
+* View current score, highest score.
+* Play next icon.
 
-# Hướng dẫn chơi <a name="play"></a>
-* Click chuột/phím SPACE/phím UP để chơi.
-* Nhấn phím ESC để tạm dừng.
-* Video demo tại [Youtube](https://youtu.be/LihM4SI81ug).
+# How to play <a name="play"></a>
+* Click mouse or press SPACE/UP key to play.
+* Press ESC to pause.
+* Video demo at [Youtube](https://youtu.be/LihM4SI81ug).
 
-<p align="center">
-<img src="https://i.imgur.com/dvni6mF.png">
-</p>
+<a href="https://drive.google.com/uc?export=view&id=1-VLc4JJQAT5af783uYiI_5eb3X3PrUBp"><img src="https://drive.google.com/uc?export=view&id=1-VLc4JJQAT5af783uYiI_5eb3X3PrUBp"/></a>
+
 # Cài đặt <a name="installation"></a>
 
-Sau khi cài đặt [Mingw64](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-win32/seh/x86_64-8.1.0-release-win32-seh-rt_v6-rev0.7z/download), [SDL2](https://www.libsdl.org/download-2.0.php), [SDL_Image](https://www.libsdl.org/projects/SDL_image), [SDL_TTF](https://www.libsdl.org/projects/SDL_ttf), và [SDL_Mixer](https://www.libsdl.org/projects/SDL_mixer), chạy file **Flappy Doge.exe** để vào game.
+After installing [Mingw64](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-win32/seh/x86_64-8.1.0-release-win32-seh-rt_v6-rev0.7z/download), [SDL2](https://www.libsdl.org/download-2.0.php), [SDL_Image](https://www.libsdl.org/projects/SDL_image), [SDL_TTF](https://www.libsdl.org/projects/SDL_ttf), và [SDL_Mixer](https://www.libsdl.org/projects/SDL_mixer), run **Flappy Doge.exe** to enter the game.
 
-_* Có thể không cần cài SDL2, SDL_Image, SDL_TTF và SDL_Mixer vì các file **.dll** đã có sẵn trong đường dẫn ./res/sdl._
-
-
-
+_* You may not need to install SDL2, SDL_Image, SDL_TTF and SDL_Mixer because the **.dll** files are already in the ./res/sdl path.

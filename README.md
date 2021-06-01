@@ -40,7 +40,9 @@ _*The resources used in the game are collected from the Internet and most of the
 * Press ESC to pause.
 * Video demo at [Youtube](https://youtu.be/LihM4SI81ug).
 
-<a href="https://drive.google.com/uc?export=view&id=1-VLc4JJQAT5af783uYiI_5eb3X3PrUBp"><img src="https://drive.google.com/uc?export=view&id=1-VLc4JJQAT5af783uYiI_5eb3X3PrUBp"/></a>
+<p align="center">
+<img src="https://i.imgur.com/dvni6mF.png">
+</p>
 
 # Installation <a name="installation"></a>
 
